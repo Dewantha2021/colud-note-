@@ -697,8 +697,39 @@ Main function is to deliver utilities needed by the system:
 
 ## 16. Data Center Efficiency
 
-### Power Usage Effectiveness (PUE)
-Used to measure energy efficiency
+### Data Center Efficiency Metrics
+
+The following formulas are used to calculate the efficiency of data center infrastructure:
+
+#### 1. Power Usage Effectiveness (PUE)
+
+PUE is the ratio of the total power entering a data center facility to the power consumed by the IT equipment within it. A lower PUE value indicates better efficiency.
+
+```
+PUE = Total Facility Energy / IT Equipment Energy
+```
+
+**Interpretation:**
+- **PUE = 2.0**: 50% efficiency (for every 2 watts entering, 1 watt powers IT)
+- **PUE = 1.5**: 67% efficiency
+- **PUE = 1.0**: 100% efficiency (ideal, all power goes to IT equipment)
+
+#### 2. Data Center Infrastructure Efficiency (DCIE)
+
+DCIE is the reciprocal of PUE, often expressed as a percentage. It measures how much of the energy consumed is actually being delivered to the computing equipment.
+
+```
+DCIE = (IT Equipment Energy / Total Facility Energy) × 100%
+
+OR
+
+DCIE = (1 / PUE) × 100%
+```
+
+**Interpretation:**
+- **Higher DCIE** = Better efficiency
+- **DCIE = 100%**: Perfect efficiency (all energy goes to IT)
+- **DCIE = 50%**: Half the energy goes to IT, half to overhead
 
 ### Optimizations Include:
 - Cooling adjustment
@@ -1093,3 +1124,10 @@ This comprehensive guide covers:
 ✅ **Virtualization** is the foundation of cloud infrastructure  
 ✅ **Data Centers** are the physical backbone of cloud services  
 ✅ **Pay-as-you-go** pricing model reduces upfront costs  
+
+---
+
+
+**Last Updated:** 2025
+
+---
